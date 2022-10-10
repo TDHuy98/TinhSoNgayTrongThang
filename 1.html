@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày trong tháng</title>
+</head>
+<body>
+    <input id="thang" placeholder="Nhập tháng muốn tính số ngày" type="text">
+    <button id="tinh" onclick="switchcase()">Tính số ngày trong tháng</button>
+    <p id="songay"></p>
+<script>
+    function switchcase() {
+        let thang = document.getElementById('thang').value;
+        switch (thang) {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '11':
+                document.getElementById('songay').innerHTML = 'Tháng này có 31 ngày';
+                break;
+            case '2':
+                document.getElementById('songay').innerHTML = 'Tháng này có 28 hoặc 29 ngày';
+                break;
+            default:
+                document.getElementById('songay').innerHTML = 'Tháng này có 30 ngày'
+
+        }
+    }
+</script>
+</body>
+</html>
